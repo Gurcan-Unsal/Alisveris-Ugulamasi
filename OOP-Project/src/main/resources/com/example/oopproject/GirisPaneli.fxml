@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.GirisKontrol">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="263.0" style="-fx-background-color: #064635;">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" layoutX="93.0" layoutY="151.0" size="80" />
+            <Label layoutX="47.0" layoutY="279.0" text="Alışveriş Uygulaması" textFill="WHITE">
+               <font>
+                  <Font name="Forte" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="382.0" layoutY="44.0" text="Giriş Paneli" textFill="#064635">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="kullaniciAdi" layoutX="365.0" layoutY="130.0" promptText="Kullanıcı Adı" />
+      <PasswordField fx:id="sifre" layoutX="365.0" layoutY="200.0" promptText="Şifre" />
+      <FontAwesomeIconView fill="#064635" glyphName="USER" layoutX="344.0" layoutY="147.0" />
+      <FontAwesomeIconView fill="#064635" glyphName="KEY" layoutX="342.0" layoutY="217.0" />
+      <Button fx:id="girisButonu" layoutX="402.0" layoutY="265.0" mnemonicParsing="false" onAction="#girisYap" prefHeight="46.0" prefWidth="74.0" style="-fx-background-color: #064635;" text="Giriş Yap" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Hyperlink fx:id="kayitPaneliLink" layoutX="389.0" layoutY="344.0" onAction="#kayitPaneliniAc" text="Hesabın Yok Mu?" />
+   </children>
+</AnchorPane>

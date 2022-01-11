@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="602.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.MarketKontrol">
+   <children>
+      <AnchorPane prefHeight="140.0" prefWidth="1015.0" style="-fx-background-color: #064635;">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" layoutX="56.0" layoutY="91.0" size="60" />
+            <Label layoutX="389.0" layoutY="56.0" text="Alışveriş Uygulaması" textFill="WHITE">
+               <font>
+                  <Font name="Forte" size="24.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="cikisLink" layoutX="947.0" layoutY="88.0" onAction="#cikisYap" text="Çıkış Yap" textFill="WHITE" />
+            <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="930.0" layoutY="105.0" size="15" />
+            <Label fx:id="bakiyeLabel" layoutX="967.0" layoutY="31.0" text="Label" textFill="WHITE" />
+            <Label layoutX="886.0" layoutY="31.0" text="Bakiyeniz(TL) :" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="140.0" prefHeight="462.0" prefWidth="257.0">
+         <children>
+            <Button fx:id="kiyafetButonu" layoutX="7.0" layoutY="14.0" mnemonicParsing="false" onAction="#kiyafetleriGoster" prefHeight="50.0" prefWidth="242.0" style="-fx-background-color: #064635;" text="Kıyafetler" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="elektronikButonu" layoutX="7.0" layoutY="125.0" mnemonicParsing="false" onAction="#elektronikleriGoster" prefHeight="50.0" prefWidth="242.0" style="-fx-background-color: #064635;" text="Elektronik Eşyalar" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="yiyecekButonu" layoutX="7.0" layoutY="241.0" mnemonicParsing="false" onAction="#yiyecekleriGoster" prefHeight="50.0" prefWidth="242.0" style="-fx-background-color: #064635;" text="Yiyecek-İçecekler" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="bakiyeButonu" layoutX="7.0" layoutY="387.0" mnemonicParsing="false" onAction="#bakiyeYukle" prefHeight="50.0" prefWidth="242.0" text="Bakiye Yükle">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="bakiyeTextField" layoutX="7.0" layoutY="345.0" prefWidth="242.0" promptText="Yüklemek İstediğiniz Miktar..." />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="kiyafetPane" layoutX="258.0" layoutY="140.0" prefHeight="462.0" prefWidth="750.0">
+         <children>
+            <ImageView fx:id="ayakKabiResim" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Kıyafetler/sneakers.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tshirtResim" fitHeight="150.0" fitWidth="200.0" layoutX="309.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Kıyafetler/tshirt.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="sapkaResim" fitHeight="150.0" fitWidth="200.0" layoutX="537.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Kıyafetler/hat.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="kazakResim" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Kıyafetler/sweater.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pantolonResim" fitHeight="150.0" fitWidth="200.0" layoutX="317.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Kıyafetler/trousers.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="atkiResim" fitHeight="150.0" fitWidth="200.0" layoutX="561.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Kıyafetler/scarf.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="ayakkabiLabel" layoutX="30.0" layoutY="167.0" text="100 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="ayakkabiButon" layoutX="114.0" layoutY="163.0" mnemonicParsing="false" onAction="#ayakkabiAl" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="tshirtLabel" layoutX="334.0" layoutY="174.0" text="75 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="tshirtButon" layoutX="407.0" layoutY="170.0" mnemonicParsing="false" onAction="#tshirtAl" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="sapkaLabel" layoutX="580.0" layoutY="174.0" text="10 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="sapkaButon" layoutX="652.0" layoutY="170.0" mnemonicParsing="false" onAction="#sapkaAl" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="kazakLabel" layoutX="35.0" layoutY="408.0" text="50 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="kazakButon" layoutX="114.0" layoutY="404.0" mnemonicParsing="false" onAction="#kazakAl" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="pantolonLabel" layoutX="334.0" layoutY="408.0" text="80 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="pantolonButon" layoutX="406.0" layoutY="404.0" mnemonicParsing="false" onAction="#pantolonAl" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="atkiLabel" layoutX="585.0" layoutY="408.0" text="5 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="atkiButon" layoutX="652.0" layoutY="404.0" mnemonicParsing="false" onAction="#atkiAl" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="elektronikPane" layoutX="258.0" layoutY="140.0" prefHeight="462.0" prefWidth="750.0" visible="false">
+         <children>
+            <ImageView fx:id="bilgisayarResim" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Elektronik%20Eşyalar/computer.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="telefonResim" fitHeight="140.0" fitWidth="150.0" layoutX="300.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Elektronik%20Eşyalar/phone.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="televizyonResim" fitHeight="140.0" fitWidth="195.0" layoutX="536.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Elektronik%20Eşyalar/television.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="camasirMakinesiResim" fitHeight="150.0" fitWidth="200.0" layoutX="40.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Elektronik%20Eşyalar/washer.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="buzdolabiResim" fitHeight="150.0" fitWidth="200.0" layoutX="307.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Elektronik%20Eşyalar/fridge.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tostMakinesiResim" fitHeight="150.0" fitWidth="200.0" layoutX="560.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Elektronik%20Eşyalar/toastmachine.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="bilgisayarLabel" layoutX="41.0" layoutY="175.0" text="2000 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="bilgisayarButon" layoutX="135.0" layoutY="171.0" mnemonicParsing="false" onAction="#bilgisayarAl" prefHeight="38.0" prefWidth="69.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="telefonLabel" layoutX="302.0" layoutY="175.0" text="1000 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="telefonButon" layoutX="392.0" layoutY="169.0" mnemonicParsing="false" onAction="#telefonAl" prefHeight="38.0" prefWidth="69.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="televizyonLabel" layoutX="551.0" layoutY="175.0" text="1250 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="televizyonButon" layoutX="641.0" layoutY="169.0" mnemonicParsing="false" onAction="#televizyonAl" prefHeight="38.0" prefWidth="69.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="camasirMakinesiLabel" layoutX="51.0" layoutY="413.0" text="500 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="camasirMakinesiButon" layoutX="135.0" layoutY="409.0" mnemonicParsing="false" onAction="#camasirMakinesiAl" prefHeight="38.0" prefWidth="69.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="buzdolabiLabel" layoutX="307.0" layoutY="413.0" text="750 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="buzdolabiButon" layoutX="390.0" layoutY="412.0" mnemonicParsing="false" onAction="#buzdolabiAl" prefHeight="38.0" prefWidth="69.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="tostMakinesiLabel" layoutX="556.0" layoutY="413.0" text="100 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="tostMakinesiButon" layoutX="646.0" layoutY="410.0" mnemonicParsing="false" onAction="#tostMakinesiAl" prefHeight="38.0" prefWidth="69.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="yiyecekPane" layoutX="258.0" layoutY="140.0" prefHeight="462.0" prefWidth="750.0" visible="false">
+         <children>
+            <ImageView fx:id="biftekResim" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Yiyecekler/steak.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tacoResim" fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Yiyecekler/taco.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="kizartmaResim" fitHeight="150.0" fitWidth="200.0" layoutX="586.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Yiyecekler/fries.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="kolaResim" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Yiyecekler/coke.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pastaResim" fitHeight="150.0" fitWidth="200.0" layoutX="302.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Yiyecekler/cake.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dondurmaResim" fitHeight="150.0" fitWidth="200.0" layoutX="586.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Pic/Yiyecekler/icecream.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="biftekLabel" layoutX="41.0" layoutY="178.0" text="75 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="biftekButon" layoutX="108.0" layoutY="174.0" mnemonicParsing="false" onAction="#biftekAl" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="tacoLabel" layoutX="318.0" layoutY="178.0" text="50 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="tacoButon" layoutX="377.0" layoutY="174.0" mnemonicParsing="false" onAction="#tacoAl" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="kizartmaLabel" layoutX="596.0" layoutY="181.0" text="10 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="kizartmaButon" layoutX="656.0" layoutY="174.0" mnemonicParsing="false" onAction="#kizartmaAl" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="kolaLabel" layoutX="46.0" layoutY="408.0" text="3 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="kolaButon" layoutX="108.0" layoutY="404.0" mnemonicParsing="false" onAction="#kolaAl" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="pastaLabel" layoutX="318.0" layoutY="408.0" text="10 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="pastaButon" layoutX="377.0" layoutY="404.0" mnemonicParsing="false" onAction="#pastaAl" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="dondurmaLabel" layoutX="601.0" layoutY="408.0" text="5 TL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="dondurmaButon" layoutX="656.0" layoutY="403.0" mnemonicParsing="false" onAction="#dondurmaAl" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: #064635;" text="Satın Al" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
